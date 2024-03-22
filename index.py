@@ -88,5 +88,29 @@ for m in range(4):
     print("m :",m,"f :",f)
     if f==9:
         break
+    
+#continue
+b=2
+for u in range(4):
+    b=b+2
+    print("u :",u,"b :",b)
+    if b==6:
+        continue
+    print("Wow")    
           
+# try, except
+try:
+    userinput1=int(input("Enter first number:"))
+    userinput2=int(input("Enter second number:"))
+    answer=userinput1/userinput2
+    print(answer)
+    file=open("missing.txt", "r")
+except ValueError:
+    print("Please enter a number.You did not entered a number")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except Exception as e:
+    print("Unknown error:", e)
+    
+              
                
