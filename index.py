@@ -17,7 +17,7 @@ months=("Jan", "March" , "April", "May", "June", "July", "August", "September", 
 print(months[-1])
 
 #Dictionary: use curly braces
-people={"John":20,"Kamau":33,"Janto":21,"Swaleh":"Not recognised"}
+people={"John":20,"Nora":33,"Janitor":21,"Swahili":"Not recognized"}
 print(people)
 
 #dict() method can be used
@@ -112,5 +112,46 @@ except ZeroDivisionError:
 except Exception as e:
     print("Unknown error:", e)
     
-              
-               
+print(answer)    
+    
+#functions and modules
+
+#function with several arguments
+
+def add(*num):
+    sum=0
+    for r in num:
+        sum=sum+r
+    #sum=sum+r
+    return sum
+
+print(add(23,33,44,55,66,77,88))
+
+#function with keyworded arguments
+def keyword(**age):
+    for i,j in age.items():
+        print("Name = ",i," , age = ",j)
+        
+print(keyword(Jones=20,Bult=20))
+#formal arguments
+#def user(farg,*args,**kwargs):
+ #   for e in range(0,len(args)):
+  #      print(e)
+
+#import mod
+#prime=mod.PrimeNumber(23)
+#print(prime)   
+
+#File handling
+     
+file=open ('test.txt', 'r')
+firstline=file.readline()
+secondline=file.readline()
+print(firstline)
+print(secondline)
+file.close()
+
+#using for loop to read files
+f=open('test.txt','r')
+for line in f:
+    print(line,end='')
