@@ -155,3 +155,13 @@ file.close()
 f=open('test.txt','r')
 for line in f:
     print(line,end='')
+f.close()    
+    
+#writing to txt files 
+write=open('test.txt','a')
+write.write('\n Python is fun')
+write.write('\n Writing to txt files in Python is easy!')
+write.close()
+
+   
+    

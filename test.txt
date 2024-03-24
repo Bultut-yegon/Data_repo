@@ -1,0 +1,3 @@
+
+ Python is fun
+ Writing to txt files in Python is easy!
