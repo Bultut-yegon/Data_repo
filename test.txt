@@ -1,3 +1,5 @@
 
  Python is fun
  Writing to txt files in Python is easy!
+ Python is fun
+ Writing to txt files in Python is easy!
