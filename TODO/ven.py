@@ -19,7 +19,9 @@
 def points(scores):
     points=1
     while scores != 0:
-        if scores >5 and scores <=10:
+        if scores >=1 and scores <=5:
+            points=points+1
+        elif scores >5 and scores <=10:
             points=points+2
         elif scores >10 and scores <=20:
             points=points+3
@@ -27,7 +29,8 @@ def points(scores):
             points=points+5
         return points
 point=int(input('Enter the points: '))
-print(points(point))        
+game=points(point) 
+print('The points are: ',game)       
                 
 
     
