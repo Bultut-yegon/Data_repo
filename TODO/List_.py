@@ -91,3 +91,30 @@ def rerun(w):
 numbers=list((12,23,45,67,89,100,77,50)    
 numbers.sort(key=rerun)
 print(numbers)
+#By default sort() function is case sensitive. It sorts out words that have capital letters before the words with small letters.
+#so we use key=str.lower to solve this issue
+names=list(('James','john','Paulina','henry','Meshack','risper'))
+names.sort(key=str.lower)
+print(names)
+
+#The order of the list can also be reversed using reverse() keyword
+names.reverse()
+print(names)
+#copying of lists.
+#method:copy() and list()
+My_list=this_list.copy()
+print(My_list)
+My_word=list(My_list)
+print(My_word)
+
+#Joining lists.
+#Either use for loop or extend()
+me=list((22,34,56,78,90,100))
+her=list((12,23,34,45,56,67))
+#for loop
+for x in her:
+    me.append(x)
+print(me) 
+#extend keyword
+me.extend(her)
+print(me)
