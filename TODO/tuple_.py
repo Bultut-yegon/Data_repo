@@ -19,3 +19,11 @@ print(type(changed))
 #tuple length
 print(len(changed))
 #to remove an element in a tuple, convert it to list, remove the element and convert back to tuple
+#del my_tuple #to delete the whole tuple
+#unpacking a tuple
+fruits=tuple(('mangoes','lemons','grapes','bananas'))
+(w,x,y,z)=fruits
+print(w)
+print(x)
+print(y)
+print(z)
