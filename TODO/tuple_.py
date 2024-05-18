@@ -26,4 +26,23 @@ fruits=tuple(('mangoes','lemons','grapes','bananas'))
 print(w)
 print(x)
 print(y)
-print(z)
+print(z) #The number of variables must match the number of values in the tuple.
+
+#if the number of variables is less than the number of values,use * to accommodate for the remaining values
+fruit=tuple(('mangoes','lemons','grapes','bananas'))
+(a,b,*c)=fruit
+print(a)
+print(b)
+print(c)
+#looping through a tuple
+#using for loop
+for j in fruit:
+    print(j)
+#using range() and len()
+for k in range(len(fruit)):
+    print(k,fruit[k])
+#using while loop
+w=0
+while w < len(fruit):
+    print(fruit[w],w)
+    w=w+1
