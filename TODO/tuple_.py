@@ -46,3 +46,10 @@ w=0
 while w < len(fruit):
     print(fruit[w],w)
     w=w+1
+    
+#joining tuples
+#use + operator
+tup_1=tuple((1,2,3,4,5,6))
+tup_2=tuple((10,20,30,40,50))
+ending=tup_1+tup_2
+print(ending)    
