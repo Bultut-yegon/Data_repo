@@ -88,7 +88,7 @@ print(this_list)
 
 def rerun(w):
     return abs(w-50)
-numbers=list((12,23,45,67,89,100,77,50)    
+numbers=list((12,23,45,67,89,100,77,50) )   
 numbers.sort(key=rerun)
 print(numbers)
 #By default sort() function is case sensitive. It sorts out words that have capital letters before the words with small letters.
@@ -118,3 +118,9 @@ print(me)
 #extend keyword
 me.extend(her)
 print(me)
+#check if a list is hashable
+aws=[3,2,3,4,6]
+try:
+    print(hash(aws))
+except TypeError as e:
+    print(e)#returns unhashable type error
