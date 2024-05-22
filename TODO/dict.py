@@ -65,4 +65,20 @@ while p<5:
     p=p+1
     if p==3:
         continue
-    print(p, end='')
+    print(p)
+    
+num1=[1,2,3]
+num2=[10,11,12]
+for f in num1:
+    for g in num2:
+        print(f,g)   
+#functions
+#POA(positional only arguments)
+def place(a,/):
+    print(a)
+place(7)
+#KW(keyword only arguments)
+def place(a,*,b):
+    print(a)
+    print(b)
+place(7,b=8)

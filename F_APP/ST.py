@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QWidget,QApplication,QLabel,QPushButton,QVBoxLayout,
 app=QApplication([])
 main_window=QWidget()
 main_window.setWindowTitle("First Project")
-main_window.resize(300, 220)
+main_window.resize(350, 250)
 
 title=QLabel("Starting position")
 
