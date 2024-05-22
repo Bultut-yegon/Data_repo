@@ -73,12 +73,16 @@ for f in num1:
     for g in num2:
         print(f,g)   
 #functions
-#POA(positional only arguments)
+#POA(positional only arguments)=> (,/)
 def place(a,/):
     print(a)
 place(7)
-#KW(keyword only arguments)
+#KW(keyword only arguments)=> (*,)
 def place(a,*,b):
     print(a)
     print(b)
 place(7,b=8)
+#(*args) and (**kwargs)
+def num(*numbers):
+    print(numbers)
+num(1,2,3,4,5,6,7,8,9,10)
