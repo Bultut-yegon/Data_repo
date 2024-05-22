@@ -1,6 +1,6 @@
 def grade(score):
     score=''
-    print('Your score is ')
+    #print('Your score is ')
     
     if score <=20 and score <=50:
         print('You need to work hard')

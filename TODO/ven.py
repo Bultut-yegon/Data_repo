@@ -1,20 +1,20 @@
 
-# def deals(cost):
-#     if cost >50 and cost<=150:
-#         respond='Good deal'
-#     elif cost>150:
-#         respond='very expensive'
-#     else:
-#         respond='Too cheap, can buy now'
-#     return respond
+def deals(cost):
+    if cost >50 and cost<=150:
+        respond='Good deal'
+    elif cost>150:
+        respond='very expensive'
+    else:
+        respond='Too cheap, can buy now'
+    return respond
 
-# store=input('store name:')
-# cost=float(input('cost:'))
+store=input('store name:')
+cost=float(input('cost:'))
 
-# use=deals(cost)
-# print(store, "---",cost)
-# if use=="Good deal":
-#     print('buy it now before the deal is over')
+use=deals(cost)
+print(store, "---",cost)
+if use=="Good deal":
+    print('buy it now before the deal is over')
     
 def points(scores):
     points=1
