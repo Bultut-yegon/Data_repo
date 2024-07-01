@@ -1,14 +1,21 @@
-num=[2,3,5,6,7,87,54,332,43]
-print(num.sort(reverse=True))
+# num=[2,3,5,6,7,87,54,332,43]
+# print(num.sort(reverse=True))
 
-#setp3s
-a_sub={1,2,3,4,5,6,6}
-a_sub1={5,6,7,7,8,9}
-sub=a_sub.union(a_sub1)
-a_sub | a_sub1
-print(sub)
-for value in sub:
-    print(value)
+# #setp3s
+# a_sub={1,2,3,4,5,6,6}
+# a_sub1={5,6,7,7,8,9}
+# sub=a_sub.union(a_sub1)
+# a_sub | a_sub1
+# print(sub)
+# for value in sub:
+#     print(value)
     
-import time as t 
-print(t.time())       
+# import time as t 
+# print(t.time()) 
+"""
+data = {'Name': ['John', 'Jane', 'Bob', 'Alice'],
+        'Age': [25, 30, 35, 40],
+        'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']}
+
+print(data)     
+"""

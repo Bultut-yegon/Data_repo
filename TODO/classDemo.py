@@ -1,52 +1,77 @@
-# class Person:
-#     def __init__(self,pPay,pCourse,pName):
-#         self.pay=pPay
-#         self.course=pCourse
-#         self.name=pName
-#     def __str__(self):
-#         return "Name= %s, Course= %s,payment=%d" % (self.name, self.course, self.payment)
-    
-class Payee:
-    # init method initializes the variables
-    def __init__(self, position,payment,salary):
-        self._position=position
-        self.payment=payment
-        self.salary=salary
-        
-        # str method returns a human readable string
+from abc import ABC,abstractmethod
+
+class Safaricom(ABC):
+    def __init__(self,name,age,mobile_number,county):
+        self.__name=name
+        self.age=age
+        self.__mobile_number=mobile_number
+        self.county=county
     def __str__(self):
-        return 'The position is %s, payment is %d,salary is %d' % (self._position, self.payment, self.salary)
-    #calculate pay is a method that calculates the net salary of a certain member
-    def calculatePay(self):
-        pay=int(input("Enter the amount you receive"))
-        hours=int(input("Enter the number of hours you work per day"))
-        salary=(pay*hours*30)*12
-        print("Yearly Pay is : ", salary)
+        return 'Name: %s, Age: %d, Mobile Number: %d, County: %s' % (self.name, self.age, self.__mobile_number, self.county)
+    @property
+    def name(self):
+        return self.__name
         
-        #we can access objects instance variables using a dot operator
-        # example payee.payment, payee.position, payee.salary
-        
-    '''Properties of class and methods. It allows us to check on the 
-    changes we want to make before executing them'''
-    
-    # Lets dive into properties now
+    @name.setter
+    def name(self, value):
+        invalid = ['!', '@', '#', '$', '%', '^', '&', '*',
+               '(', ')', '_', '+', '-', '=', '[', ']', '{', '}',
+               ';', "'", ':', '"', '\\', '|', ',', '.', '<', '>', '/', '?']
+        # global invalid
+        if value == 0 or value in invalid:
+            raise ValueError('Invalid name')
+        self.__name = value
+    @abstractmethod
+    def get_mobile_number(self):
+        return self.__mobile_number
+    def set_mobile_number(self, value):
+        if value < 0:
+            raise ValueError('Invalid number')
+        self.__mobile_number = value
 
-# we use underscore in front of the variable name. Let's look at the self.position variable and change it
-    @property # a decorator function
-    def position(self):
-        print('Getter method')
-        return self._position
-    
-    @position.setter # decorator function. It has parameter value that is assigned to the position variable
-    def position(self, value):
-        if value == "manager" or value == "clerk":
-            self._position = value
-        else:
-            return "Not available position"
+user=Safaricom('Juma', 21, 1234567890, 'Nairobi')
+print(user)
 
+class PremiumSafaricom(Safaricom):
+    def __init__(self, name, age, mobile_number, county, package):
+        super().__init__(name, age, mobile_number, county)
+        self.package = package
+
+    def __str__(self):
+        return super().__str__() + ', Package: %s' % self.package
+    def get_mobile_number(self):
+        # return super().get_mobile_number()
+        return self.mobile_number()
+
+
+class GoldSafaricom(Safaricom):
+    def __init__(self, name, age, mobile_number, county, bonus_points):
+        super().__init__(name, age, mobile_number, county)
+        self.bonus_points = bonus_points
+
+    def __str__(self):
+        return super().__str__() + ', Bonus Points: %d' % self.bonus_points
     
-    
+    def call(self):
+        print('Calling...')
+    def text(self):
+        print('Texting...')
+    def retrieving(self):
+        print('Retrieving call...')
         
-        
-        
-                 
+    def busy(self):
+        print('You are busy...')    
+            
+
+
+# Example usage
+premium_customer = PremiumSafaricom('John Doe', 25, 1234567890, 'Nairobi', 'Premium Plus')
+print(premium_customer)
+
+gold_customer = GoldSafaricom('Jane Smith', 30, 9876543210, 'Mombasa', 5000)
+print(gold_customer)
+
+customer=Safaricom('John', 21, 1234567890, 'Nairobi')
+
+print(premium_customer.get_mobile_number())
+print(gold_customer.get_mobile_number())    

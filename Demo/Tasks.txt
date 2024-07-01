@@ -1,0 +1,10 @@
+try, except->throw statement 
+enter a word with vowels.
+print the number of vowels in each word.
+
+A login system. The system should use username and password.
+If the user enters five times without logging in, print ,you are not an administrator
+also print the number of times the user tried to log in.
+You need to initialize their login details.password and username.
+
+Lists. (add, remove, update, delete)
